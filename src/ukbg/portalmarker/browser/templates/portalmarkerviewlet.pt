@@ -1,6 +1,12 @@
 <div id="portalmarker">
 <div class="row">
   <!--h1 tal:content="viewlet/greetings"/-->
-page view
+<nav class="portal-marker-head" id="js-header">
+ <span tal:content="viewlet/memberfullname" />
+	<div class="portal-marker-container clearfix">
+		<h1 id="logo">Intranet</h1>
+	</div>
+</nav>
+  <!--h1 tal:content="viewlet/greetings"/-->
 </div>
 </div>
