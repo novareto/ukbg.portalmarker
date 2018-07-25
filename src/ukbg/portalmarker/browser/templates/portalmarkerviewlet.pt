@@ -1,12 +1,13 @@
 <div id="portalmarker">
-<div class="row">
-  <!--h1 tal:content="viewlet/greetings"/-->
-<nav class="portal-marker-head" id="js-header">
- <span tal:content="viewlet/memberfullname" />
+  <div class="portalmarker">
+  <nav class="portal-marker-head" id="js-header">
+    <span class="portalmarker-fullname">
+    	<i class="glyphicon glyphicon-user"></i>
+	<span tal:content="viewlet/memberfullname" />
+    </span>
 	<div class="portal-marker-container clearfix">
 		<h1 id="logo">Intranet</h1>
 	</div>
-</nav>
-  <!--h1 tal:content="viewlet/greetings"/-->
-</div>
+   </nav>
+  </div>
 </div>
