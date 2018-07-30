@@ -1,13 +1,27 @@
 <div id="portalmarker">
-  <div class="portalmarker">
+<div class="portalmarker">
   <nav class="portal-marker-head" id="js-header">
-    <span class="portalmarker-fullname">
-    	<i class="glyphicon glyphicon-user"></i>
-	<span tal:content="viewlet/memberfullname" />
-    </span>
-	<div class="portal-marker-container clearfix">
-		<h1 id="logo">Intranet</h1>
-	</div>
+
+    <ul class="nav navbar-nav navbar-right">
+      <li id="fat-menu" class="dropdown">
+        <a id="drop3" href="#" class="dropdown-profile" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+           <span class="portalmarker-fullname">
+            <i class="glyphicon glyphicon-user"></i>
+            <span tal:content="viewlet/memberfullname" />
+          <span class="caret"></span>
+          </span>
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="drop3">
+          <li><a href="">mein Ordner</a></li>
+          <li><a href="">meine Einstellungen</a></li>
+          <li><a href="">Erweiterte Einstellungen</a></li>
+        </ul>
+      </li>
+      <li class="portal-marker-container clearfix">
+                <h1 id="logo">Intranet</h1>
+      </li>
+    </ul>
+
    </nav>
   </div>
 </div>
