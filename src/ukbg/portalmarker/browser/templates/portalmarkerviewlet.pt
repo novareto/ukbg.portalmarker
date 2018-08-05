@@ -12,9 +12,8 @@
           </span>
         </a>
         <ul class="dropdown-menu" aria-labelledby="drop3">
-          <li><a href="">mein Ordner</a></li>
-          <li><a href="">meine Einstellungen</a></li>
-          <li><a href="">Erweiterte Einstellungen</a></li>
+          <li tal:condition="viewlet/memberfolder"><a href="" tal:attributes="href viewlet/memberfolder">Mein Ordner</a></li>
+          <li><a href="" tal:attributes="href viewlet/userprofile">Erweitertes Benutzerprofil</a></li>
         </ul>
       </li>
       <li class="portal-marker-container clearfix">

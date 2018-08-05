@@ -11,8 +11,27 @@ class PortalMarkerViewlet(api.Viewlet):
     api.viewletmanager(IPortalTop)
 
     def update(self):
-        self.greetings = 'Hallo Welt'
 	self.memberfullname = self.member_name_or_id()
+        self.memberfolder = self.memberfolder()
+        self.memberprefs = self.memberprefs()
+        self.userprofile = self.userprofile()
+
+    def memberfolder(self):
+        if not ploneapi.user.is_anonymous():
+            userid = ploneapi.user.get_current().id
+            portalobj = ploneapi.portal.get()
+            members = getattr(portalobj, 'Members', None)
+            if members:
+                memberfolder = getattr(members, userid, None)
+                if memberfolder:
+                    return "%s/Members/%s" %(ploneapi.portal.get().absolute_url(), userid)
+            return None
+
+    def memberprefs(self):
+        return ploneapi.portal.get().absolute_url() + '/@@personal-preferences'
+
+    def userprofile(self):
+        return ploneapi.portal.get().absolute_url() + '/@@userprofileform'
 
     def member_name_or_id(self, ):
         """
