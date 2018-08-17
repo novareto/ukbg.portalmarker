@@ -2,7 +2,8 @@
 <div class="portalmarker">
   <nav class="portal-marker-head" id="js-header">
 
-    <ul class="nav navbar-nav navbar-right">
+    <div class="col-xs-9">
+    <ul class="nav navbar-nav admin">
       <li id="fat-menu" class="dropdown">
         <a id="drop3" href="#" class="dropdown-profile" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
            <span class="portalmarker-fullname">
@@ -16,11 +17,15 @@
           <li><a href="" tal:attributes="href viewlet/userprofile">Erweitertes Benutzerprofil</a></li>
         </ul>
       </li>
+     </ul>
+    </div>
+   <div class="col-xs-3">
+      <ul class="nav navbar-nav navbar-right">
       <li class="portal-marker-container clearfix">
                 <h1 id="logo">Intranet</h1>
       </li>
     </ul>
-
+   </div>
    </nav>
   </div>
 </div>
