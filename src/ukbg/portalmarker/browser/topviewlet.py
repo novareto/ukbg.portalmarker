@@ -1,17 +1,19 @@
 from zope.interface import Interface
 from plone.app.layout.viewlets.interfaces import IPortalTop
 from plone.app.layout.viewlets.interfaces import IPortalHeader
+from nva.contentboxes.browser.viewlets import ContentBoxViewlet
 from plone import api as ploneapi
 from uvc.api import api
 
 api.templatedir('templates')
 
-class PortalMarkerViewlet(api.Viewlet):
+class PortalMarkerViewlet(ContentBoxViewlet):
     api.context(Interface)
     api.viewletmanager(IPortalTop)
 
-    def update(self):
-	self.memberfullname = self.member_name_or_id()
+
+    def memberdata(self):
+        self.memberfullname = self.member_name_or_id()
         self.memberfolder = self.memberfolder()
         self.memberprefs = self.memberprefs()
         self.userprofile = self.userprofile()
