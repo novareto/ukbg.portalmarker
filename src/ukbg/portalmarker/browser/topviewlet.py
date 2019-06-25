@@ -35,6 +35,21 @@ class PortalMarkerViewlet(ContentBoxViewlet):
     def userprofile(self):
         return ploneapi.portal.get().absolute_url() + '/@@userprofileform'
 
+
+    def loginform(self):
+        loginurl = ''
+        if ploneapi.user.is_anonymous():
+            loginurl = "%s/%s" %(ploneapi.portal.get().absolute_url(), 'login')
+        return loginurl
+
+
+    def logoutform(self):
+        logouturl =  ''
+        if not ploneapi.user.is_anonymous():
+            logouturl = "%s/%s" %(ploneapi.portal.get().absolute_url(), 'logout')
+        return logouturl
+
+
     def member_name_or_id(self, ):
         """
         """
