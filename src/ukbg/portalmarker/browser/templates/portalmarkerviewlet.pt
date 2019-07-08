@@ -5,62 +5,6 @@
     <div class="col-xs-1"></div>
 
     <div class="col-xs-9">
-    <!-- Tablet and Mobile View of the Servicebuttons -->
-    <ul class="nav navbar-nav servicebutton-dropdown">
-      <li id="fat-menu" class="servicebutton-dropdown-list dropdown">
-        <a id="drop4" href="#" class="servicebutton-dropdownlist-item dropdown-profile" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-           <span class="portalmarker-servicebutton">Ihre persönlichen Servicebutton
-          <span class="caret"></span>
-          </span>
-        </a>
-        <ul class="servicebutton dropdown-menu" tal:define="objectlist viewlet/objectlist;group python:objectlist[0]" 
-            tal:condition="group" aria-labelledby="drop4">
-                <li tal:repeat="box group"><a tal:attributes="href box/url">
-                  <img class="portalmarker-servicebutton-icon" tal:attributes="src box/topimg"/></a></li>
-		<!--<li><a class="servicebutton-config" href="">
-                  <i class="fa fa-star"></i></a><a class="servicebutton-config" href=""><i class="fa fa-plus"></i></a></li>-->
-	</ul>
-      </li>
-     </ul>
-    <!-- Tablet and Mobile View of the Servicebuttons END -->
-    <!-- Desktop View of the Servicebuttons -->
-    <ul class="portalmarker-servicebutton-list servicebutton-desktop-list col-md-10" 
-         tal:define="objectlist viewlet/objectlist;group python:objectlist[0]" tal:condition="group" aria-labelledby="drop4">
-        <li class="servicebutton-list-item col-md-2" tal:repeat="box group">
-          <a tal:attributes="href box/url">
-            <img class="portalmarker-servicebutton-icon" tal:attributes="src box/topimg"/>
-            <p class="portalmarker-servicebutton-name" tal:content="box/toptitle"></p> 
-          </a>
-        </li>
-
-	<li class="servicebutton-list-item col-md-2">
-		<a tal:condition="python:len(viewlet.objectlist)>1" data-toggle="modal" data-target="#topModal"><i class="fa fa-plus"></i></a>
-		<a tal:condition="python:viewlet.personalbuttons" data-toggle="modal" data-target="#personalModal"><i class="fa fa-star"></i></a>
-                <a data-toggle="modal" data-target="#myModal"><i class="fa fa-cubes"></i></a>
-                <a href="@@userprofileform"><i class="fa fa-cog"></i></a>
-	</li>
-    </ul>
-
-<div class="row praevdoc_contentbox collapse" id="myButtons" tal:condition="python:len(viewlet.objectlist)>1">
-<div class="container-fluid well" tal:define="groups python:viewlet.objectlist[1:]">
-  <div tal:repeat="group groups" class="row-eq-height">
-    <div
-      tal:repeat="box group" class="col-xs-6 col-md-2 panel panel-primary servicebutton-cards"
-      tal:attributes="class box/boxclass">
-      <!--<div class="panel-heading" tal:content="box/title"></div>-->
-      <div class="box-body">
-      <a class="boxlink col-xs-12" href="" tal:attributes="href box/url">
-      <span tal:replace="structure box/imgurl"/>
-      <h6 style="text-align:center" class="" tal:content="box/title" tal:attributes="class box/titleclass"/>
-      </a>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-
-
-    <!-- Desktop View of the Servicebuttons END -->
     <ul class="nav navbar-nav admin">
       <li id="fat-menu" class="dropdown">
         <a id="drop3" href="#" class="dropdown-profile" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
@@ -80,7 +24,7 @@
    <div class="col-xs-2">
       <ul class="nav navbar-nav navbar-right">
       <li class="portal-marker-container clearfix">
-                <h1 id="logo">Intranet</h1>
+                <h1 style="margin-left:30%"  id="logo">INWI</h1>
       </li>
     </ul>
    </div>
